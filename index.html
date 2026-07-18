@@ -393,7 +393,7 @@
           </div>
 
           <div class="form-field">
-            <label for="attendanceStatus">Katılım durumu</label>
+            <label for="attendanceStatus">Katılım Durumu</label>
             <select id="attendanceStatus" name="attendanceStatus" required>
               <option value="" selected disabled>Seçiniz</option>
               <option value="Katılacağım">Katılacağım</option>
@@ -403,22 +403,23 @@
           </div>
 
           <div class="form-field">
-            <label for="guestCount">Kişi sayısı</label>
+            <label for="guestCount">Kişi Sayısı</label>
             <select id="guestCount" name="guestCount" required>
               <option value="" selected disabled>Seçiniz</option>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
+	      <option value="4">4</option>
             </select>
           </div>
 
           <div class="form-field full">
             <label for="phone">Telefon <span class="required-mark">*</span></label>
-            <input id="phone" name="phone" type="tel" inputmode="numeric" pattern="[0-9 ]*" placeholder="Telefon numaranız" required />
+            <input id="phone" name="phone" type="tel" inputmode="numeric" pattern="[0-9 ]*" placeholder="Telefon Numaranız" required />
           </div>
 
           <div class="form-field full">
-            <label for="message">Notunuz / iyi dilek mesajınız</label>
+            <label for="message">Notunuz / İyi Dilek Mesajınız</label>
             <textarea id="message" name="message" placeholder="Mesajınız"></textarea>
           </div>
 
@@ -615,7 +616,7 @@
         const sentToGoogleSheets = await sendRsvpToGoogleSheets(payload);
         rsvpForm.reset();
         rsvpStatus.textContent = sentToGoogleSheets
-          ? 'LCV kaydınız alındı. Teşekkür ederiz.'
+          ? 'Kaydınız alındı. Teşekkür ederiz.'
           : 'LCV kaydınız bu cihazda saklandı. Google Sheets bağlantısı için Apps Script URL ayarı gerekiyor.';
       } catch (error) {
         rsvpStatus.textContent = 'Kayıt sırasında sorun oluştu. Lütfen tekrar deneyin.';
